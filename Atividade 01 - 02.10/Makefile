@@ -11,4 +11,4 @@ MakeImage.o: MakeImage.cc MakeImage.h
 	g++ -c MakeImage.cc -o MakeImage.o
 
 clean:
-	rm -f executavel *.o
+	rm -f executavel *.o *.png *.ppm
