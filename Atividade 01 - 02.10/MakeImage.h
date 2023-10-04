@@ -4,22 +4,17 @@
 #define MAKEIMAGE_H
 
 #include <string>
-#include <Magick++.h>
 
 class MakeImage {
 public:
-    MakeImage(int image_width, int image_height);
-    ~MakeImage();
-
     void drawGradient();
     void drawRing();
     void drawTriangle();
     bool saveImage(const std::string& nomeDoArquivo);
 
 private:
-    int image_width;
-    int image_height;
-    Magick::Image image;
+    int image_width = 256;
+    int image_height = 256;
 };
 
 #endif // MAKEIMAGE_H
