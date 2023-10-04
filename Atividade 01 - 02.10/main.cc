@@ -5,17 +5,16 @@
 
 int main() {
 
-    const int image_width = 256;
-    const int image_height = 256;
-
-    MakeImage myImage(image_width, image_height);
+    MakeImage myImage = MakeImage();
 
     myImage.drawGradient();
-    myImage.saveImage("gradiente.png");
+    myImage.saveImage("result-gradiente.png");
 
     myImage.drawRing();
-    myImage.saveImage("anel.png");
+    myImage.saveImage("result-anel.png");
 
     myImage.drawTriangle();
-    myImage.saveImage("triangulo.png");
+    myImage.saveImage("result-triangulo.png");
+
+    return 0;
 }
