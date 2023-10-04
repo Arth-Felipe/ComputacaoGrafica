@@ -2,23 +2,16 @@
 
 #include "MakeImage.h"
 #include <iostream>
+#include <fstream>
+#include <Magick++.h>
 
-MakeImage::MakeImage(int image_width, int image_height) : image_width(image_width), image_height(image_height) {
-    // Inicialize o ImageMagick aqui
-    Magick::InitializeMagick(nullptr);
-
-    // Inicialize a imagem com as dimensões especificadas e um fundo branco
-    image = Magick::Image(Magick::Geometry(image_width, image_height), Magick::Color("white"));
-}
-
-MakeImage::~MakeImage() {
-    // O destrutor pode ser usado para liberar recursos, se necessário
-}
+//-------------------------------------------------------------------------------------------------------------//
 
 // Imagem Gradiente
 void MakeImage::drawGradient() {
 
-    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
+    std::ofstream file("result-gradiente.ppm");
+    file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     for (int j = 0; j < image_height; ++j) {
         for (int i = 0; i < image_width; ++i) {
@@ -26,15 +19,20 @@ void MakeImage::drawGradient() {
             int green = j;
             int blue = 255 - j;
 
-            std::cout << red << ' ' << green << ' ' << blue << '\n';
+            file << red << ' ' << green << ' ' << blue << '\n';
         }
     }
+    file.close();
+    std::cout << "Imagem 'result-gradiente.ppm' gerada com sucesso!" << std::endl;
 }
+
+//-------------------------------------------------------------------------------------------------------------//
 
 // Imagem Anel
 void MakeImage::drawRing() {
 
-    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
+    std::ofstream file("result-anel.ppm");
+    file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     const int centerX = image_width / 2;
     const int centerY = image_height / 2;
@@ -55,15 +53,20 @@ void MakeImage::drawRing() {
                 green = 255;
             }
 
-            std::cout << red << ' ' << green << ' ' << blue << '\n';
+            file << red << ' ' << green << ' ' << blue << '\n';
         }
     }
+    file.close();
+    std::cout << "Imagem 'result-anel.ppm' gerada com sucesso!" << std::endl;
 }
+
+//-------------------------------------------------------------------------------------------------------------//
 
 // Imagem Triângulo
 void MakeImage::drawTriangle() {
 
-    std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
+    std::ofstream file("result-triangulo.ppm");
+    file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     // Coordenadas dos vértices do triângulo
     int x1 = image_width / 2;
@@ -87,16 +90,39 @@ void MakeImage::drawTriangle() {
                 blue = 255;
             }
 
-            std::cout << red << ' ' << green << ' ' << blue << '\n';
+            file << red << ' ' << green << ' ' << blue << '\n';
         }
     }
+    file.close();
+    std::cout << "Imagem 'result-triangulo.ppm' gerada com sucesso!" << std::endl;
 }
 
+//-------------------------------------------------------------------------------------------------------------//
+
 bool MakeImage::saveImage(const std::string& nomeDoArquivo) {
+
+    // Inicialização do ImageMagick
+    Magick::InitializeMagick(nullptr);
+
+    std::string oldFormat = "x";
+
+    if (nomeDoArquivo[7] == 'g') {
+        oldFormat = "result-gradiente.ppm";
+
+    } else if (nomeDoArquivo[7] == 'a') {
+        oldFormat = "result-anel.ppm";
+
+    } else { // (nomeDoArquivo[7] == 't')
+        oldFormat = "result-triangulo.ppm";
+    }
+
+    Magick::Image image(oldFormat);
+
     try {
         image.write(nomeDoArquivo);
         std::cout << "Imagem salva como '" << nomeDoArquivo << "'." << std::endl;
         return true;
+
     } catch (Magick::Exception& e) {
         std::cerr << "Erro ao salvar a imagem: " << e.what() << std::endl;
         return false;
