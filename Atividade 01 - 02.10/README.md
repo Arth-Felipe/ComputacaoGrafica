@@ -1,15 +1,5 @@
 # Atividade 01 - 2 de Outubro
 
-Estes passos incluem a criação de um programa em _`C++`_ que irá criar a imagem e a respectiva criação do arquivo desta imagem no formato _`.ppm`_. Para tanto, em primeiro lugar, o arquivo _`main.cc`_ foi compilado através do comando _`g++ main.cc -o main`_. Depois, o arquivo de execução gerado _(`main`)_ foi transformado na devida imagem através do comando _`./main > image.ppm`_.
-
-Por fim, para visualizar, o arquivo de saída foi aberto num visualizador de _`ppm`_ online, que pode ser acessado em: _https://www.cs.rhodes.edu/welshc/COMP141_F16/ppmReader.html_
-
------------
-
-3) Gere pelo menos três imagens. Exemplos: degradê, círculo, quadrado, etc...
-
-----------
-
 Nesta primeira atividade, a proposta era evoluir o que foi feito no exercício anterior _([Atividade 00](https://github.com/Arth-Felipe/ComputacaoGrafica/tree/main/Atividade%2000%20-%2002.10))_ e criar uma classe própria para o salvamento das imagens. Essa ação deveria salvar os antigos arquivos de formato _`.ppm`_ em imagens propriamente ditas (formato _`.png`_, por exemplo) com a biblioteca [ImageMagick](https://imagemagick.org/index.php). Para tanto, o programa original em _`C++`_ foi dividido e encapsulado em outros 3:
 
 1. _`main.cc`_ - Arquivo principal com a criação do objeto e a chamada dos métodos da classe para salvar as imagens
@@ -42,7 +32,7 @@ Agora sim, partindo pro cerne da questão, temos que os métodos da classe criad
 - _`drawTriangle()`_ - Cria um triângulo equilátero azul num fundo preto
 - _`saveImage(nomeDoArquivo)`_ - Inicializa o uso da biblioteca e, através de uma de suas funções próprias, converte os arquivos _`.ppm`_ gerados acima em imagens _`.png`_
 
-Com isso, temos os seguintes resultados:
+Com isso, temos os seguintes resultados gerados na própria pasta de execução do programa:
 
 ![Imagem Gradiente](/Atividade%2001%20-%2002.10/result-gradiente.png)
 ![Imagem Anel](/Atividade%2001%20-%2002.10/result-anel.png)
