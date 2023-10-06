@@ -1,4 +1,13 @@
-// Arquivo de implementação que contém a definição dos métodos da classe
+/**
+ * @file MakeImage.cc
+ * @author Arthur Felipe Bravo Pita
+ * @brief Arquivo de implementação contendo a definição e desenvolvimento dos métodos da classe
+ * @version 1.0
+ * @date 2023-10-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 
 #include "MakeImage.h"
 #include <iostream>
@@ -7,7 +16,10 @@
 
 //-------------------------------------------------------------------------------------------------------------//
 
-// Imagem Gradiente
+/**
+ * @brief Esta função gera um arquivo .ppm de uma imagem gradiente do azul para o verde
+ * 
+ */
 void MakeImage::drawGradient() {
 
     std::ofstream file("result-gradiente.ppm");
@@ -23,17 +35,21 @@ void MakeImage::drawGradient() {
         }
     }
     file.close();
-    std::cout << "Imagem 'result-gradiente.ppm' gerada com sucesso!" << std::endl;
+    std::cout << "Geração do arquivo 'result-gradiente.ppm' bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
 
-// Imagem Anel
+/**
+ * @brief Esta função gera um arquivo .ppm de uma imagem de um anel (ou rosquinha) verde num fundo preto
+ * 
+ */
 void MakeImage::drawRing() {
 
     std::ofstream file("result-anel.ppm");
     file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
+    // Constantes para a criação dos dois círculos que irão compor o anel (um externo e um interno)
     const int centerX = image_width / 2;
     const int centerY = image_height / 2;
     const int outerRadius = 90;
@@ -57,12 +73,15 @@ void MakeImage::drawRing() {
         }
     }
     file.close();
-    std::cout << "Imagem 'result-anel.ppm' gerada com sucesso!" << std::endl;
+    std::cout << "Geração do arquivo 'result-anel.ppm' bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
 
-// Imagem Triângulo
+/**
+ * @brief Esta função gera um arquivo .ppm de uma imagem de um triângulo equilátero azul num fundo preto
+ * 
+ */
 void MakeImage::drawTriangle() {
 
     std::ofstream file("result-triangulo.ppm");
@@ -94,11 +113,18 @@ void MakeImage::drawTriangle() {
         }
     }
     file.close();
-    std::cout << "Imagem 'result-triangulo.ppm' gerada com sucesso!" << std::endl;
+    std::cout << "Geração do arquivo 'result-triangulo.ppm' bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
 
+/**
+ * @brief Esta função inicializa o uso da biblioteca ImageMagick e, através de uma de suas funções próprias, converte os arquivos .ppm gerados pelas funções anteriores em imagens .png
+ * 
+ * @param nomeDoArquivo Representa o nome do arquivo de imagem .png que será gerada a partir dos .ppm
+ * @return true Significa que a criação e escrita da imagem foram bem-sucedidas
+ * @return false Significa que houve uma falha no processo de salvar a imagem a partir do .ppm
+ */
 bool MakeImage::saveImage(const std::string& nomeDoArquivo) {
 
     // Inicialização do ImageMagick
@@ -106,15 +132,14 @@ bool MakeImage::saveImage(const std::string& nomeDoArquivo) {
 
     std::string oldFormat = "x";
 
-    if (nomeDoArquivo[7] == 'g') {
+    if (nomeDoArquivo[7] == 'g')
         oldFormat = "result-gradiente.ppm";
 
-    } else if (nomeDoArquivo[7] == 'a') {
+    else if (nomeDoArquivo[7] == 'a')
         oldFormat = "result-anel.ppm";
 
-    } else { // (nomeDoArquivo[7] == 't')
+    else // (nomeDoArquivo[7] == 't')
         oldFormat = "result-triangulo.ppm";
-    }
 
     Magick::Image image(oldFormat);
 

@@ -1,4 +1,7 @@
-// Arquivo de cabeçalho que contém a declaração da classe e de seus membros
+/**
+ * @brief Arquivo de cabeçalho contendo a declaração da classe "MakeImage" e de seus membros
+ * 
+ */
 
 #ifndef MAKEIMAGE_H
 #define MAKEIMAGE_H
@@ -13,6 +16,8 @@ public:
     bool saveImage(const std::string& nomeDoArquivo);
 
 private:
+
+    // Definição do tamanho da imagem a ser gerada
     int image_width = 256;
     int image_height = 256;
 };

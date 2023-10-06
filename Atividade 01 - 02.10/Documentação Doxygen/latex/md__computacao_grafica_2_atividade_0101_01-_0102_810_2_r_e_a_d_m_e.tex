@@ -1,0 +1,51 @@
+\chapter{Atividade 01 -\/ 2 de Outubro}
+\hypertarget{md__computacao_grafica_2_atividade_0101_01-_0102_810_2_r_e_a_d_m_e}{}\label{md__computacao_grafica_2_atividade_0101_01-_0102_810_2_r_e_a_d_m_e}\index{Atividade 01 -\/ 2 de Outubro@{Atividade 01 -\/ 2 de Outubro}}
+\label{md__computacao_grafica_2_atividade_0101_01-_0102_810_2_r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__computacao_grafica_2_atividade_0101_01-_0102_810_2_r_e_a_d_m_e_autotoc_md0}%
+ Nesta primeira atividade, a proposta era evoluir o que foi feito no exercício anterior \+\_\+(\href{https://github.com/Arth-Felipe/ComputacaoGrafica/tree/main/Atividade\%2000\%20-\%2002.10}{\texttt{ Atividade 00}})\+\_\+ e criar uma classe própria para o salvamento das imagens. Essa ação deveria salvar os antigos arquivos de formato \+\_\+$<$tt$>$.\+ppm\+\_\+ em imagens propriamente ditas (formato \+\_\+$<$tt$>$.\+png\+\_\+, por exemplo) com a biblioteca \href{https://imagemagick.org/index.php}{\texttt{ Image\+Magick}}. Para tanto, o programa original em \+\_\+{\ttfamily C++}\+\_\+ foi dividido e encapsulado em outros 3\+:
+
+
+\begin{DoxyEnumerate}
+\item \+\_\+{\ttfamily \doxylink{main_8cc}{main.\+cc}}\+\_\+ -\/ Arquivo principal com a criação do objeto e a chamada dos métodos da classe para salvar as imagens
+\item \+\_\+{\ttfamily \doxylink{_make_image_8h}{Make\+Image.\+h}}\+\_\+ -\/ Arquivo de cabeçalho que contém a declaração da classe e de seus atributos
+\item \+\_\+{\ttfamily \doxylink{_make_image_8cc}{Make\+Image.\+cc}}\+\_\+ -\/ Arquivo de implementação dos métodos da classe
+\end{DoxyEnumerate}
+
+Com isso, a compilação, execução e limpeza dos arquivos gerados passaram a precisar de diversos comandos no terminal\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{g++\ -\/c\ MakeImage.cc\ -\/o\ MakeImage.o}
+\DoxyCodeLine{g++\ main.cc\ MakeImage.o\ -\/o\ main\ -\/lMagick++}
+\DoxyCodeLine{./main}
+\DoxyCodeLine{rm\ MakeImage.o\ main}
+
+\end{DoxyCode}
+
+
+Para facilitar, foi criado um arquivo Makefile que centralizou todos esses comandos, permitindo que agora a compilação ocorresse apenas com o comando \+\_\+{\ttfamily make}\+\_\+ e a execução com \+\_\+{\ttfamily ./executavel}\+\_\+. Com o comando \+\_\+{\ttfamily make clean}\+\_\+ é possível ainda limpar todo o "{}lixo"{} gerado pela compilação, excluindo assim o arquivo \+\_\+{\ttfamily executavel}\+\_\+ e todos com terminações \+\_\+$<$tt$>$.\+o\+\_\+, \+\_\+$<$tt$>$.\+png\+\_\+ e \+\_\+$<$tt$>$.\+ppm\+\_\+.
+
+Se observarmos o arquivo Makefile mencionado, perceberemos que a compilação conta com \+\_\+{\ttfamily -\/l\+Magick++}\+\_\+ para a inclusão da biblioteca utilizada. Contudo, para isso dar certo, {\bfseries{antes}} é preciso instalar a biblioteca \href{https://imagemagick.org/index.php}{\texttt{ Image\+Magick}} através dos comandos\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo\ apt\ install\ imagemagick}
+\DoxyCodeLine{sudo\ apt\ install\ libmagick++-\/dev}
+\DoxyCodeLine{sudo\ apt\ install\ graphicsmagick-\/libmagick-\/dev-\/compat}
+
+\end{DoxyCode}
+
+
+Agora sim, partindo pro cerne da questão, temos que os métodos da classe criada \doxylink{class_make_image}{Make\+Image} são responsáveis por\+:
+
+
+\begin{DoxyItemize}
+\item \+\_\+{\ttfamily draw\+Gradient()}\+\_\+ -\/ Cria um degradê que começa azul na parte superior e termina em verde na inferior, suavemente
+\item \+\_\+{\ttfamily draw\+Ring()}\+\_\+ -\/ Cria um anel (ou rosquinha) verde num fundo preto
+\item \+\_\+{\ttfamily draw\+Triangle()}\+\_\+ -\/ Cria um triângulo equilátero azul num fundo preto
+\item \+\_\+{\ttfamily save\+Image(nome\+Do\+Arquivo)}\+\_\+ -\/ Inicializa o uso da biblioteca e, através de uma de suas funções próprias, converte os arquivos \+\_\+$<$tt$>$.\+ppm\+\_\+ gerados acima em imagens \+\_\+$<$tt$>$.\+png\+\_\+
+\end{DoxyItemize}
+
+Com isso, temos os seguintes resultados gerados na própria pasta de execução do programa\+:
+
+   
