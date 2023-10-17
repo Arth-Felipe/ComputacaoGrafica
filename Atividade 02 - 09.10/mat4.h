@@ -4,6 +4,7 @@
  * @brief Código de definição da classe mat4, para operar com matrizes de tamanho 4x4.
  * @version 1.0
  * @date 2023-10-16
+ * @todo Cálculo do determinante da matriz a ser feito no futuro (tentar expansão de Laplace ou regra de Sarrus para submatrizes 3x3.
  * 
  * @copyright Copyright (c) 2023
  * 
@@ -97,8 +98,7 @@ public:
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 e[i][j] += m.e[i][j];
-            }
-        }
+        }   }
         return *this;
     }
 
@@ -122,8 +122,7 @@ public:
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 e[i][j] *= t;
-            }
-        }
+        }   }
         return *this;
     }
 
@@ -148,7 +147,7 @@ public:
     }
 
     /**
-     * @brief Cálculo do determinante da matriz a ser feito no futuro (tentar expansão de Laplace ou regra de Sarrus para submatrizes 3x3.
+     * @brief Cálculo do determinante da matriz a ser feito no futuro (tentar expansão de Laplace ou regra de Sarrus para submatrizes 3x3).
      * 
      * @return double 
      */
@@ -198,8 +197,7 @@ inline mat4 operator+(const mat4 &a, const mat4 &b) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             result(i, j) = a(i, j) + b(i, j);
-        }
-    }
+    }   }
     return result;
 }
 
@@ -224,8 +222,7 @@ inline mat4 operator-(const mat4 &a, const mat4 &b) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             result(i, j) = a(i, j) - b(i, j);
-        }
-    }
+    }   }
     return result;
 }
 
@@ -253,8 +250,7 @@ inline mat4 operator*(const mat4 &a, const mat4 &b) {
                            a(i, 1) * b(1, j) +
                            a(i, 2) * b(2, j) +
                            a(i, 3) * b(3, j);
-        }
-    }
+    }   }
     return result;
 }
 
@@ -270,8 +266,7 @@ inline mat4 operator*(double t, const mat4 &m) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             result(i, j) = t * m(i, j);
-        }
-    }
+    }   }
     return result;
 }
 
@@ -318,8 +313,7 @@ inline double dot(const mat4 &a, const mat4 &b) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             result += a(i, j) * b(i, j);
-        }
-    }
+    }   }
     return result;
 }
 
@@ -336,8 +330,7 @@ inline vec4 operator*(const mat4 &m, const vec4 &v) {
         result[i] = 0;
         for (int j = 0; j < 4; j++) {
             result[i] += m(i, j) * v[j];
-        }
-    }
+    }   }
     return result;
 }
 
@@ -377,8 +370,7 @@ inline mat4 transpose(const mat4 &m) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
             result(i, j) = m(j, i);
-        }
-    }
+    }   }
     return result;
 }
 
