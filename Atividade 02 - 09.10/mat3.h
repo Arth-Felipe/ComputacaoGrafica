@@ -226,7 +226,9 @@ inline mat3 operator*(const mat3 &a, const mat3 &b) {
     mat3 result;
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            result(i, j) = a(i, 0) * b(0, j) + a(i, 1) * b(1, j) + a(i, 2) * b(2, j);
+            result(i, j) = a(i, 0) * b(0, j) +
+                           a(i, 1) * b(1, j) +
+                           a(i, 2) * b(2, j);
     }   }
     return result;
 }
@@ -262,7 +264,7 @@ inline mat3 operator*(const mat3 &m, double t) {
 }
 
 /**
- * @brief Operador de divisão de matriz por escalar.
+ * @brief Operação de divisão de matriz por escalar.
  * 
  * @param m 
  * @param t 
