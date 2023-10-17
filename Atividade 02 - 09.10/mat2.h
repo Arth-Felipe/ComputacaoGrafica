@@ -2,7 +2,7 @@
  * @file mat2.h
  * @author Arthur Felipe Bravo Pita
  * @brief Código de definição da classe mat2, para manipular matrizes de tamanho 2x2.
- * @version 1.0
+ * @version 1.1
  * @date 2023-10-16
  * 
  * @copyright Copyright (c) 2023
@@ -12,6 +12,7 @@
 #ifndef MAT2_H
 #define MAT2_H
 
+#include "vec2.h"
 #include <cmath>
 #include <iostream>
 
@@ -146,8 +147,10 @@ inline std::ostream& operator<<(std::ostream &out, const mat2 &m) {
  * @return mat2 
  */
 inline mat2 operator+(const mat2 &a, const mat2 &b) {
-    return mat2(a.e[0][0] + b.e[0][0], a.e[0][1] + b.e[0][1],
-                a.e[1][0] + b.e[1][0], a.e[1][1] + b.e[1][1]);
+    return mat2(a.e[0][0] + b.e[0][0],
+                a.e[0][1] + b.e[0][1],
+                a.e[1][0] + b.e[1][0],
+                a.e[1][1] + b.e[1][1]);
 }
 
 /**
@@ -158,8 +161,10 @@ inline mat2 operator+(const mat2 &a, const mat2 &b) {
  * @return mat2 
  */
 inline mat2 operator-(const mat2 &a, const mat2 &b) {
-    return mat2(a.e[0][0] - b.e[0][0], a.e[0][1] - b.e[0][1],
-                a.e[1][0] - b.e[1][0], a.e[1][1] - b.e[1][1]);
+    return mat2(a.e[0][0] - b.e[0][0],
+                a.e[0][1] - b.e[0][1],
+                a.e[1][0] - b.e[1][0],
+                a.e[1][1] - b.e[1][1]);
 }
 
 /**
@@ -184,7 +189,10 @@ inline mat2 operator*(const mat2 &a, const mat2 &b) {
  * @return mat2 
  */
 inline mat2 operator*(double t, const mat2 &m) {
-    return mat2(t * m.e[0][0], t * m.e[0][1], t * m.e[1][0], t * m.e[1][1]);
+    return mat2(t * m.e[0][0],
+                t * m.e[0][1],
+                t * m.e[1][0],
+                t * m.e[1][1]);
 }
 
 /**
@@ -207,6 +215,72 @@ inline mat2 operator*(const mat2 &m, double t) {
  */
 inline mat2 operator/(mat2 m, double t) {
     return (1 / t) * m;
+}
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = //
+
+/**
+ * @brief Produto escalar entre matrizes.
+ * 
+ * @param a 
+ * @param b 
+ * @return double 
+ */
+inline double dot(const mat2 &a, const mat2 &b) {
+    return a.e[0][0] * b.e[0][0] + a.e[0][1] * b.e[1][0]
+         + a.e[1][0] * b.e[0][1] + a.e[1][1] * b.e[1][1];
+}
+
+/**
+ * @brief Produto vetorial entre matrizes.
+ * 
+ * @param a 
+ * @param b 
+ * @return mat2 
+ */
+inline mat2 cross(const mat2 &a, const mat2 &b) {
+    return mat2(a.e[0][0] * b.e[0][0],
+                a.e[0][1] * b.e[0][1],
+                a.e[1][0] * b.e[1][0],
+                a.e[1][1] * b.e[1][1]);
+}
+
+/**
+ * @brief Operações de matriz por vetor.
+ * 
+ * @param m 
+ * @param v 
+ * @return vec2 
+ */
+inline vec2 operator*(const mat2 &m, const vec2 &v) {
+    return vec2(m.e[0][0] * v.x() + m.e[0][1] * v.y(),
+                m.e[1][0] * v.x() + m.e[1][1] * v.y());
+}
+
+inline vec2 operator*(const vec2 &v, const mat2 &m) {
+    return m * v;
+}
+
+/**
+ * @brief Matriz de Identidade.
+ * 
+ * @return mat2 
+ */
+inline mat2 identity() {
+    return mat2(1.0, 0.0, 0.0, 1.0);
+}
+
+/**
+ * @brief Transposição de matriz.
+ * 
+ * @param m 
+ * @return mat2 
+ */
+inline mat2 transpose(const mat2 &m) {
+    return mat2(m.e[0][0],
+                m.e[1][0],
+                m.e[0][1],
+                m.e[1][1]);
 }
 
 #endif
