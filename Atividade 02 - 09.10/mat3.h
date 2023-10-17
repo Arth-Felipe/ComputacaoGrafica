@@ -331,7 +331,7 @@ inline vec3 operator*(const vec3 &v, const mat3 &m) {
  * 
  * @return mat3 
  */
-inline mat3 identity() {
+inline mat3 identity3() {
     return mat3(1.0, 0.0, 0.0,
                 0.0, 1.0, 0.0,
                 0.0, 0.0, 1.0);

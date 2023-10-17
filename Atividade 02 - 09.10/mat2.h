@@ -266,7 +266,7 @@ inline vec2 operator*(const vec2 &v, const mat2 &m) {
  * 
  * @return mat2 
  */
-inline mat2 identity() {
+inline mat2 identity2() {
     return mat2(1.0, 0.0, 0.0, 1.0);
 }
 

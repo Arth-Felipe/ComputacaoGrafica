@@ -352,7 +352,7 @@ inline vec4 operator*(const vec4 &v, const mat4 &m) {
  * 
  * @return mat4 
  */
-inline mat4 identity() {
+inline mat4 identity4() {
     return mat4(1.0, 0.0, 0.0, 0.0,
                 0.0, 1.0, 0.0, 0.0,
                 0.0, 0.0, 1.0, 0.0,
