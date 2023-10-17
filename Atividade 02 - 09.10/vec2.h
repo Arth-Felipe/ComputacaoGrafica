@@ -1,7 +1,7 @@
 /**
  * @file vec2.h
  * @author Arthur Felipe Bravo Pita
- * @brief 
+ * @brief Código de definição da classe vec2, feita para lidar com vetores de tamanho 2.
  * @version 1.0
  * @date 2023-10-16
  * 
