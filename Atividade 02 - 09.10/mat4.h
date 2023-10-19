@@ -156,7 +156,7 @@ public:
     }
 
     /**
-     * @brief Retorno da soma dos elementos da diagonal principal (traço da matriz).
+     * @brief Retorno da soma dos elementos da diagonal principal.
      * 
      * @return double 
      */

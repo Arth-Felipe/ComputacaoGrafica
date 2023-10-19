@@ -32,4 +32,34 @@ Tais classes incluem diversas operações de manipulação de vetores e matrizes
 
 ## Testes Unitários
 
+Para a criação e uso de testes unitários, foi escolhida a biblioteca do Google Test. Para iniciar o seu uso, primeiramente foram instaladas as seguintes extensões no Visual Studio Code:
+- C/C++, da Microsoft
+- CMake Tools, da vector-of-bool
+
+Visto que estamos usando o WSL no Visual Studio Code, também intalamos o CMake pelo terminal através do comando:
+
+```
+sudo apt install cmake
+```
+
+Na pasta pai das atividades, "ComputacaoGrafica", foi feito um clone do repositório Google Test com o comando:
+
+```
+git clone https://github.com/google/googletest.git
+```
+
+Para definir o projeto, na pasta pai "ComputacaoGrafica" foi criado um arquivo denominado `CMakeLists.txt`, um diretório chamado `test` e, dentro deste, foram criados os arquivos `CMakeLists.txt` e `ExampleTests.cc`, este último com a definição dos testes em si. Para rodar os testes, o próprio Visual Studio Code fornece um caminho através de sua interface, que podem ser conferidos na imagem abaixo:
+
+![Passo a passo para execução dos testes](/execucaoTestes.png)
+
+Por fim, os resultados podem ser conferidos abrindo o terminal e indo na aba "Output". Abaixo uma comprovação de que todos foram bem-sucedidos:
+
+![Resultado da execução bem-sucedida dos testes](/resultadoTestes.png)
+
+Para a realização correta de todos esses procedimentos e devida correção dos erros que surgiram, foram utilizados os seguintes materiais de apoio:
+
+- [Introduction to Google Test and CMake, por Rhymu's Videos](https://www.youtube.com/watch?v=Lp1ifh9TuFI)
+- [GoogleTest | GoogleTest Primer](https://google.github.io/googletest/primer.html)
+- [GoogleTest | Assertions Reference](https://google.github.io/googletest/reference/assertions.html)
+
 ## Documentação no Doxygen (?)
