@@ -61,5 +61,3 @@ Para a realização correta de todos esses procedimentos e devida correção dos
 - [Introduction to Google Test and CMake, por Rhymu's Videos](https://www.youtube.com/watch?v=Lp1ifh9TuFI)
 - [GoogleTest | GoogleTest Primer](https://google.github.io/googletest/primer.html)
 - [GoogleTest | Assertions Reference](https://google.github.io/googletest/reference/assertions.html)
-
-## Documentação no Doxygen (?)
