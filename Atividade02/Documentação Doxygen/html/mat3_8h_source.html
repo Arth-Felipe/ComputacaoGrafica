@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Atividade 2: Código-Fonte de ComputacaoGrafica/Atividade 02 - 09.10/mat3.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Atividade 2<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ff2df25e3a26cfa1eefa650eab802837.html">ComputacaoGrafica</a></li><li class="navelem"><a class="el" href="dir_3638d6947b3500e46f87b0aaf546c086.html">Atividade 02 - 09.10</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">mat3.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mat3_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef MAT3_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define MAT3_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="vec3_8h.html">vec3.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classmat3.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classmat3.html">mat3</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">   26</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[3][3];</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmat3.html#a463027040addb1c56fe84c91b74b8d79">   32</a></span>    <a class="code hl_function" href="classmat3.html#a463027040addb1c56fe84c91b74b8d79">mat3</a>() : <a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}} {}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classmat3.html#af69abd2a9895b8522212aeb0e8954d2b">   47</a></span>    <a class="code hl_function" href="classmat3.html#af69abd2a9895b8522212aeb0e8954d2b">mat3</a>(<span class="keywordtype">double</span> e00, <span class="keywordtype">double</span> e01, <span class="keywordtype">double</span> e02,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>         <span class="keywordtype">double</span> e10, <span class="keywordtype">double</span> e11, <span class="keywordtype">double</span> e12,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>         <span class="keywordtype">double</span> e20, <span class="keywordtype">double</span> e21, <span class="keywordtype">double</span> e22)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        : e{{e00, e01, e02}, {e10, e11, e12}, {e20, e21, e22}} {}</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmat3.html#a1d1b211f6a3ccc286f7320e1c6ba93db">   59</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classmat3.html#a1d1b211f6a3ccc286f7320e1c6ba93db">operator()</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> e[i][j]; }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classmat3.html#abeae23038135554678cb4ffad4ad6a42">   68</a></span>    <span class="keywordtype">double</span>&amp; <a class="code hl_function" href="classmat3.html#abeae23038135554678cb4ffad4ad6a42">operator()</a>(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j) { <span class="keywordflow">return</span> e[i][j]; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classmat3.html#a319d0ef3acc68daac58cf5d68375d1e6">   75</a></span>    <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="classmat3.html#a319d0ef3acc68daac58cf5d68375d1e6">operator-</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(-e[0][0], -e[0][1], -e[0][2],</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    -e[1][0], -e[1][1], -e[1][2],</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                    -e[2][0], -e[2][1], -e[2][2]);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classmat3.html#a5afea6651ce57716e6e80f90c1001bbd">   87</a></span>    <a class="code hl_class" href="classmat3.html">mat3</a>&amp; <a class="code hl_function" href="classmat3.html#a5afea6651ce57716e6e80f90c1001bbd">operator+=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        e[0][0] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0];</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        e[0][1] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1];</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        e[0][2] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2];</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        e[1][0] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0];</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        e[1][1] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1];</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        e[1][2] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2];</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        e[2][0] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0];</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        e[2][1] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        e[2][2] += m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classmat3.html#addda74746fd3055e1a015089b1e0256d">  106</a></span>    <a class="code hl_class" href="classmat3.html">mat3</a>&amp; <a class="code hl_function" href="classmat3.html#addda74746fd3055e1a015089b1e0256d">operator*=</a>(<span class="keywordtype">double</span> t) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        e[0][0] *= t;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        e[0][1] *= t;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        e[0][2] *= t;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        e[1][0] *= t;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        e[1][1] *= t;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        e[1][2] *= t;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        e[2][0] *= t;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        e[2][1] *= t;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        e[2][2] *= t;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classmat3.html#a6b2c07d1df367a5e26a66a8e01d4d473">  125</a></span>    <a class="code hl_class" href="classmat3.html">mat3</a>&amp; <a class="code hl_function" href="classmat3.html#a6b2c07d1df367a5e26a66a8e01d4d473">operator/=</a>(<span class="keywordtype">double</span> t) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span> *= 1 / t;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classmat3.html#a1518573c858c2d74abbcaffa27306ae1">  134</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classmat3.html#a1518573c858c2d74abbcaffa27306ae1">determinant</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">return</span> e[0][0] * (e[1][1] * e[2][2] - e[1][2] * e[2][1]) -</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>               e[0][1] * (e[1][0] * e[2][2] - e[1][2] * e[2][0]) +</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>               e[0][2] * (e[1][0] * e[2][1] - e[1][1] * e[2][0]);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classmat3.html#a2c9e6c6cf34eaab00e1a96b0a849d8ef">  145</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classmat3.html#a2c9e6c6cf34eaab00e1a96b0a849d8ef">trace</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> e[0][0] + e[1][1] + e[2][2];</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>};</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">// Funções de Operações de Matriz</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="mat3_8h.html#afcfb511abd8a6c761c0c37f3a9a32e7a">  161</a></span><span class="keyword">inline</span> std::ostream&amp; <a class="code hl_function" href="mat3_8h.html#afcfb511abd8a6c761c0c37f3a9a32e7a">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            out &lt;&lt; m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[i][j] &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        out &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">/* EQUIVALENTE À:</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment"> * inline std::ostream&amp; operator&lt;&lt;(std::ostream &amp;out, const mat3 &amp;m) {</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment"> *     return out &lt;&lt; m.e[0][0] &lt;&lt; &#39; &#39; &lt;&lt; m.e[0][1] &lt;&lt; &#39; &#39; &lt;&lt; m.e[0][2] &lt;&lt; &#39;\n&#39;</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment"> *                &lt;&lt; m.e[1][0] &lt;&lt; &#39; &#39; &lt;&lt; m.e[1][1] &lt;&lt; &#39; &#39; &lt;&lt; m.e[1][2] &lt;&lt; &#39;\n&#39;</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment"> *                &lt;&lt; m.e[2][0] &lt;&lt; &#39; &#39; &lt;&lt; m.e[2][1] &lt;&lt; &#39; &#39; &lt;&lt; m.e[2][2];</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment"> * }</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="mat3_8h.html#aa66b74a348e7f3a2082b28e2874f19db">  187</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#aa66b74a348e7f3a2082b28e2874f19db">operator+</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;b) {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0],</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1],</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2],</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0],</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1],</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2],</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0],</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1],</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2] + b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2]);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="mat3_8h.html#a9b3993c4e22141d7e09b58b8d56a3cb2">  206</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a9b3993c4e22141d7e09b58b8d56a3cb2">operator-</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;b) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0],</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1],</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2],</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0],</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1],</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2],</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0],</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1],</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                a.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2] - b.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2]);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">  225</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;b) {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_class" href="classmat3.html">mat3</a> result;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            result(i, j) = a(i, 0) * b(0, j) +</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                           a(i, 1) * b(1, j) +</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                           a(i, 2) * b(2, j);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }   }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="foldopen" id="foldopen00243" data-start="{" data-end="}">
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="mat3_8h.html#a68517a5d608580acced792d632d4770b">  243</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a>(<span class="keywordtype">double</span> t, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0],</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1],</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2],</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0],</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1],</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2],</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0],</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1],</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                t * m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2]);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>}</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="foldopen" id="foldopen00262" data-start="{" data-end="}">
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="mat3_8h.html#ad4521a73520517c30762330393183df4">  262</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m, <span class="keywordtype">double</span> t) {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">return</span> t * m;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>}</div>
+</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="foldopen" id="foldopen00273" data-start="{" data-end="}">
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="mat3_8h.html#aa00a8ac772015ba899f46e3e08893b03">  273</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#aa00a8ac772015ba899f46e3e08893b03">operator/</a>(<a class="code hl_class" href="classmat3.html">mat3</a> m, <span class="keywordtype">double</span> t) {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">return</span> (1 / t) * m;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="mat3_8h.html#a07033a31e5ff7396a343c17548f0c2b2">  284</a></span><span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="mat3_8h.html#a07033a31e5ff7396a343c17548f0c2b2">dot</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;b) {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">double</span> result = 0;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; i++) {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 3; j++) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            result += a(i, j) * b(i, j);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    }   }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>}</div>
+</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="foldopen" id="foldopen00300" data-start="{" data-end="}">
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno"><a class="line" href="mat3_8h.html#a7d4750566cef4a31f1c092cd4ce94534">  300</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a7d4750566cef4a31f1c092cd4ce94534">cross</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;a, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;b) {</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(a(1, 0) * b(2, 0) - a(2, 0) * b(1, 0),</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                a(2, 0) * b(0, 0) - a(0, 0) * b(2, 0),</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                a(0, 0) * b(1, 0) - a(1, 0) * b(0, 0),</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                a(1, 1) * b(2, 1) - a(2, 1) * b(1, 1),</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                a(2, 1) * b(0, 1) - a(0, 1) * b(2, 1),</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                a(0, 1) * b(1, 1) - a(1, 1) * b(0, 1),</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                a(1, 2) * b(2, 2) - a(2, 2) * b(1, 2),</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                a(2, 2) * b(0, 2) - a(0, 2) * b(2, 2),</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                a(0, 2) * b(1, 2) - a(1, 2) * b(0, 2));</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>}</div>
+</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="foldopen" id="foldopen00319" data-start="{" data-end="}">
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="mat3_8h.html#ab31c7435fb86bc391f8bed14b9a0361b">  319</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classvec3.html">vec3</a> <a class="code hl_function" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m, <span class="keyword">const</span> <a class="code hl_class" href="classvec3.html">vec3</a> &amp;v) {</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvec3.html">vec3</a>(m(0, 0) * v.<a class="code hl_function" href="classvec3.html#a6c771306ba110c6fc430ff08b7b188a5">x</a>() + m(0, 1) * v.<a class="code hl_function" href="classvec3.html#a83d2fd06769d2993a94720f5fed1135b">y</a>() + m(0, 2) * v.<a class="code hl_function" href="classvec3.html#adf1b790d975cd19e6090f3cc15365f0b">z</a>(),</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                m(1, 0) * v.<a class="code hl_function" href="classvec3.html#a6c771306ba110c6fc430ff08b7b188a5">x</a>() + m(1, 1) * v.<a class="code hl_function" href="classvec3.html#a83d2fd06769d2993a94720f5fed1135b">y</a>() + m(1, 2) * v.<a class="code hl_function" href="classvec3.html#adf1b790d975cd19e6090f3cc15365f0b">z</a>(),</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                m(2, 0) * v.<a class="code hl_function" href="classvec3.html#a6c771306ba110c6fc430ff08b7b188a5">x</a>() + m(2, 1) * v.<a class="code hl_function" href="classvec3.html#a83d2fd06769d2993a94720f5fed1135b">y</a>() + m(2, 2) * v.<a class="code hl_function" href="classvec3.html#adf1b790d975cd19e6090f3cc15365f0b">z</a>());</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>}</div>
+</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="foldopen" id="foldopen00325" data-start="{" data-end="}">
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="mat3_8h.html#aae61aa6d8a29cf485c6ae0bca084c4c2">  325</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classvec3.html">vec3</a> <a class="code hl_function" href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvec3.html">vec3</a> &amp;v, <span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m) {</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordflow">return</span> m * v;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>}</div>
+</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="mat3_8h.html#a2f3506e37d18a5351698c385630805c4">  334</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a2f3506e37d18a5351698c385630805c4">identity3</a>() {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(1.0, 0.0, 0.0,</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                0.0, 1.0, 0.0,</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                0.0, 0.0, 1.0);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>}</div>
+</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="foldopen" id="foldopen00346" data-start="{" data-end="}">
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="mat3_8h.html#a5ef0b4740283a5c525f1a8e0d0343068">  346</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmat3.html">mat3</a> <a class="code hl_function" href="mat3_8h.html#a5ef0b4740283a5c525f1a8e0d0343068">transpose</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmat3.html">mat3</a> &amp;m) {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmat3.html">mat3</a>(m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][0], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][0], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][0],</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][1], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][1], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][1],</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[0][2], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[1][2], m.<a class="code hl_variable" href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">e</a>[2][2]);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
+</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassmat3_html"><div class="ttname"><a href="classmat3.html">mat3</a></div><div class="ttdef"><b>Definição</b> mat3.h:19</div></div>
+<div class="ttc" id="aclassmat3_html_a1518573c858c2d74abbcaffa27306ae1"><div class="ttname"><a href="classmat3.html#a1518573c858c2d74abbcaffa27306ae1">mat3::determinant</a></div><div class="ttdeci">double determinant() const</div><div class="ttdoc">Retorno do determinante da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:134</div></div>
+<div class="ttc" id="aclassmat3_html_a1d1b211f6a3ccc286f7320e1c6ba93db"><div class="ttname"><a href="classmat3.html#a1d1b211f6a3ccc286f7320e1c6ba93db">mat3::operator()</a></div><div class="ttdeci">double operator()(int i, int j) const</div><div class="ttdoc">Operação de acesso aos elementos da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:59</div></div>
+<div class="ttc" id="aclassmat3_html_a2c9e6c6cf34eaab00e1a96b0a849d8ef"><div class="ttname"><a href="classmat3.html#a2c9e6c6cf34eaab00e1a96b0a849d8ef">mat3::trace</a></div><div class="ttdeci">double trace() const</div><div class="ttdoc">Retorno da soma dos elementos da diagonal principal da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:145</div></div>
+<div class="ttc" id="aclassmat3_html_a319d0ef3acc68daac58cf5d68375d1e6"><div class="ttname"><a href="classmat3.html#a319d0ef3acc68daac58cf5d68375d1e6">mat3::operator-</a></div><div class="ttdeci">mat3 operator-() const</div><div class="ttdoc">Operação de negação, que inverte todos os elementos da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:75</div></div>
+<div class="ttc" id="aclassmat3_html_a463027040addb1c56fe84c91b74b8d79"><div class="ttname"><a href="classmat3.html#a463027040addb1c56fe84c91b74b8d79">mat3::mat3</a></div><div class="ttdeci">mat3()</div><div class="ttdoc">Construtor padrão, inicializa a matriz com zeros.</div><div class="ttdef"><b>Definição</b> mat3.h:32</div></div>
+<div class="ttc" id="aclassmat3_html_a4ffa555adb076b441e80cb6f2a7369f7"><div class="ttname"><a href="classmat3.html#a4ffa555adb076b441e80cb6f2a7369f7">mat3::e</a></div><div class="ttdeci">double e[3][3]</div><div class="ttdoc">Matriz 3x3 para armazenamento dos elementos.</div><div class="ttdef"><b>Definição</b> mat3.h:26</div></div>
+<div class="ttc" id="aclassmat3_html_a5afea6651ce57716e6e80f90c1001bbd"><div class="ttname"><a href="classmat3.html#a5afea6651ce57716e6e80f90c1001bbd">mat3::operator+=</a></div><div class="ttdeci">mat3 &amp; operator+=(const mat3 &amp;m)</div><div class="ttdoc">Operação de adição, que adiciona outra matriz à matriz atual.</div><div class="ttdef"><b>Definição</b> mat3.h:87</div></div>
+<div class="ttc" id="aclassmat3_html_a6b2c07d1df367a5e26a66a8e01d4d473"><div class="ttname"><a href="classmat3.html#a6b2c07d1df367a5e26a66a8e01d4d473">mat3::operator/=</a></div><div class="ttdeci">mat3 &amp; operator/=(double t)</div><div class="ttdoc">Operação de divisão por escalar, que divide todos os elementos da matriz pelo escalar.</div><div class="ttdef"><b>Definição</b> mat3.h:125</div></div>
+<div class="ttc" id="aclassmat3_html_abeae23038135554678cb4ffad4ad6a42"><div class="ttname"><a href="classmat3.html#abeae23038135554678cb4ffad4ad6a42">mat3::operator()</a></div><div class="ttdeci">double &amp; operator()(int i, int j)</div><div class="ttdoc">Operação com permissão de atribuição aos elementos da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:68</div></div>
+<div class="ttc" id="aclassmat3_html_addda74746fd3055e1a015089b1e0256d"><div class="ttname"><a href="classmat3.html#addda74746fd3055e1a015089b1e0256d">mat3::operator*=</a></div><div class="ttdeci">mat3 &amp; operator*=(double t)</div><div class="ttdoc">Operação de multiplicação por escalar, que multiplica todos os elementos da matriz pelo escalar.</div><div class="ttdef"><b>Definição</b> mat3.h:106</div></div>
+<div class="ttc" id="aclassmat3_html_af69abd2a9895b8522212aeb0e8954d2b"><div class="ttname"><a href="classmat3.html#af69abd2a9895b8522212aeb0e8954d2b">mat3::mat3</a></div><div class="ttdeci">mat3(double e00, double e01, double e02, double e10, double e11, double e12, double e20, double e21, double e22)</div><div class="ttdoc">Construtor personalizado, permite especificar os elementos da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:47</div></div>
+<div class="ttc" id="aclassvec3_html"><div class="ttname"><a href="classvec3.html">vec3</a></div><div class="ttdef"><b>Definição</b> vec3.h:20</div></div>
+<div class="ttc" id="aclassvec3_html_a6c771306ba110c6fc430ff08b7b188a5"><div class="ttname"><a href="classvec3.html#a6c771306ba110c6fc430ff08b7b188a5">vec3::x</a></div><div class="ttdeci">double x() const</div><div class="ttdef"><b>Definição</b> vec3.h:27</div></div>
+<div class="ttc" id="aclassvec3_html_a83d2fd06769d2993a94720f5fed1135b"><div class="ttname"><a href="classvec3.html#a83d2fd06769d2993a94720f5fed1135b">vec3::y</a></div><div class="ttdeci">double y() const</div><div class="ttdef"><b>Definição</b> vec3.h:28</div></div>
+<div class="ttc" id="aclassvec3_html_adf1b790d975cd19e6090f3cc15365f0b"><div class="ttname"><a href="classvec3.html#adf1b790d975cd19e6090f3cc15365f0b">vec3::z</a></div><div class="ttdeci">double z() const</div><div class="ttdef"><b>Definição</b> vec3.h:29</div></div>
+<div class="ttc" id="amat3_8h_html_a07033a31e5ff7396a343c17548f0c2b2"><div class="ttname"><a href="mat3_8h.html#a07033a31e5ff7396a343c17548f0c2b2">dot</a></div><div class="ttdeci">double dot(const mat3 &amp;a, const mat3 &amp;b)</div><div class="ttdoc">Produto escalar entre matrizes.</div><div class="ttdef"><b>Definição</b> mat3.h:284</div></div>
+<div class="ttc" id="amat3_8h_html_a0df0a7a0901cee5daec15003ee3594fc"><div class="ttname"><a href="mat3_8h.html#a0df0a7a0901cee5daec15003ee3594fc">operator*</a></div><div class="ttdeci">mat3 operator*(const mat3 &amp;a, const mat3 &amp;b)</div><div class="ttdoc">Operação de multiplicação de matriz por matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:225</div></div>
+<div class="ttc" id="amat3_8h_html_a2f3506e37d18a5351698c385630805c4"><div class="ttname"><a href="mat3_8h.html#a2f3506e37d18a5351698c385630805c4">identity3</a></div><div class="ttdeci">mat3 identity3()</div><div class="ttdoc">Matriz de Identidade.</div><div class="ttdef"><b>Definição</b> mat3.h:334</div></div>
+<div class="ttc" id="amat3_8h_html_a5ef0b4740283a5c525f1a8e0d0343068"><div class="ttname"><a href="mat3_8h.html#a5ef0b4740283a5c525f1a8e0d0343068">transpose</a></div><div class="ttdeci">mat3 transpose(const mat3 &amp;m)</div><div class="ttdoc">Transposição de matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:346</div></div>
+<div class="ttc" id="amat3_8h_html_a7d4750566cef4a31f1c092cd4ce94534"><div class="ttname"><a href="mat3_8h.html#a7d4750566cef4a31f1c092cd4ce94534">cross</a></div><div class="ttdeci">mat3 cross(const mat3 &amp;a, const mat3 &amp;b)</div><div class="ttdoc">Produto vetorial entre matrizes.</div><div class="ttdef"><b>Definição</b> mat3.h:300</div></div>
+<div class="ttc" id="amat3_8h_html_a9b3993c4e22141d7e09b58b8d56a3cb2"><div class="ttname"><a href="mat3_8h.html#a9b3993c4e22141d7e09b58b8d56a3cb2">operator-</a></div><div class="ttdeci">mat3 operator-(const mat3 &amp;a, const mat3 &amp;b)</div><div class="ttdoc">Operação de subtração, para subtrair uma matriz de outra.</div><div class="ttdef"><b>Definição</b> mat3.h:206</div></div>
+<div class="ttc" id="amat3_8h_html_aa00a8ac772015ba899f46e3e08893b03"><div class="ttname"><a href="mat3_8h.html#aa00a8ac772015ba899f46e3e08893b03">operator/</a></div><div class="ttdeci">mat3 operator/(mat3 m, double t)</div><div class="ttdoc">Operação de divisão de matriz por escalar.</div><div class="ttdef"><b>Definição</b> mat3.h:273</div></div>
+<div class="ttc" id="amat3_8h_html_aa66b74a348e7f3a2082b28e2874f19db"><div class="ttname"><a href="mat3_8h.html#aa66b74a348e7f3a2082b28e2874f19db">operator+</a></div><div class="ttdeci">mat3 operator+(const mat3 &amp;a, const mat3 &amp;b)</div><div class="ttdoc">Operação de adição, para somar duas matrizes.</div><div class="ttdef"><b>Definição</b> mat3.h:187</div></div>
+<div class="ttc" id="amat3_8h_html_afcfb511abd8a6c761c0c37f3a9a32e7a"><div class="ttname"><a href="mat3_8h.html#afcfb511abd8a6c761c0c37f3a9a32e7a">operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const mat3 &amp;m)</div><div class="ttdoc">Operação de saída, para impressão da matriz.</div><div class="ttdef"><b>Definição</b> mat3.h:161</div></div>
+<div class="ttc" id="avec3_8h_html"><div class="ttname"><a href="vec3_8h.html">vec3.h</a></div><div class="ttdoc">We define the vec3 class in the top half of a new vec3.h header file, and define a set of useful vect...</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
