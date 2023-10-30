@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Documentação Atividade 01 - 02.10: Atividade 01 - 2 de Outubro</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Documentação Atividade 01 - 02.10<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Atividade 01 - 2 de Outubro</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> Nesta primeira atividade, a proposta era evoluir o que foi feito no exercício anterior _(<a href="https://github.com/Arth-Felipe/ComputacaoGrafica/tree/main/Atividade%2000%20-%2002.10">Atividade 00</a>)_ e criar uma classe própria para o salvamento das imagens. Essa ação deveria salvar os antigos arquivos de formato _&lt;tt&gt;.ppm_ em imagens propriamente ditas (formato _&lt;tt&gt;.png_, por exemplo) com a biblioteca <a href="https://imagemagick.org/index.php">ImageMagick</a>. Para tanto, o programa original em _<code>C++</code>_ foi dividido e encapsulado em outros 3:</p>
+<ol type="1">
+<li>_<code><a class="el" href="main_8cc.html" title="Programa principal que usará a instanciação de um objeto da classe &quot;MakeImage&quot; e seus métodos para sa...">main.cc</a></code>_ - Arquivo principal com a criação do objeto e a chamada dos métodos da classe para salvar as imagens</li>
+<li>_<code><a class="el" href="_make_image_8h.html">MakeImage.h</a></code>_ - Arquivo de cabeçalho que contém a declaração da classe e de seus atributos</li>
+<li>_<code><a class="el" href="_make_image_8cc.html" title="Arquivo de implementação contendo a definição e desenvolvimento dos métodos da classe.">MakeImage.cc</a></code>_ - Arquivo de implementação dos métodos da classe</li>
+</ol>
+<p>Com isso, a compilação, execução e limpeza dos arquivos gerados passaram a precisar de diversos comandos no terminal:</p>
+<div class="fragment"><div class="line">g++ -c MakeImage.cc -o MakeImage.o</div>
+<div class="line">g++ main.cc MakeImage.o -o main -lMagick++</div>
+<div class="line">./main</div>
+<div class="line">rm MakeImage.o main</div>
+</div><!-- fragment --><p>Para facilitar, foi criado um arquivo Makefile que centralizou todos esses comandos, permitindo que agora a compilação ocorresse apenas com o comando _<code>make</code>_ e a execução com _<code>./executavel</code>_. Com o comando _<code>make clean</code>_ é possível ainda limpar todo o "lixo" gerado pela compilação, excluindo assim o arquivo _<code>executavel</code>_ e todos com terminações _&lt;tt&gt;.o_, _&lt;tt&gt;.png_ e _&lt;tt&gt;.ppm_.</p>
+<p>Se observarmos o arquivo Makefile mencionado, perceberemos que a compilação conta com _<code>-lMagick++</code>_ para a inclusão da biblioteca utilizada. Contudo, para isso dar certo, <b>antes</b> é preciso instalar a biblioteca <a href="https://imagemagick.org/index.php">ImageMagick</a> através dos comandos:</p>
+<div class="fragment"><div class="line">sudo apt install imagemagick</div>
+<div class="line">sudo apt install libmagick++-dev</div>
+<div class="line">sudo apt install graphicsmagick-libmagick-dev-compat</div>
+</div><!-- fragment --><p>Agora sim, partindo pro cerne da questão, temos que os métodos da classe criada <a class="el" href="class_make_image.html" title="Arquivo de cabeçalho contendo a declaração da classe &quot;MakeImage&quot; e de seus membros.">MakeImage</a> são responsáveis por:</p>
+<ul>
+<li>_<code>drawGradient()</code>_ - Cria um degradê que começa azul na parte superior e termina em verde na inferior, suavemente</li>
+<li>_<code>drawRing()</code>_ - Cria um anel (ou rosquinha) verde num fundo preto</li>
+<li>_<code>drawTriangle()</code>_ - Cria um triângulo equilátero azul num fundo preto</li>
+<li>_<code>saveImage(nomeDoArquivo)</code>_ - Inicializa o uso da biblioteca e, através de uma de suas funções próprias, converte os arquivos _&lt;tt&gt;.ppm_ gerados acima em imagens _&lt;tt&gt;.png_</li>
+</ul>
+<p>Com isso, temos os seguintes resultados gerados na própria pasta de execução do programa:</p>
+<p><img src="/Atividade%2001%20-%2002.10/result-gradiente.png" alt="Imagem Gradiente" class="inline"/> <img src="/Atividade%2001%20-%2002.10/result-anel.png" alt="Imagem Anel" class="inline"/> <img src="/Atividade%2001%20-%2002.10/result-triangulo.png" alt="Imagem Triângulo" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
