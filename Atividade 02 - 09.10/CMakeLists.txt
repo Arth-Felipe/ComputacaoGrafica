@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.22.1)
 
 # Variável "This" usada em diversos lugares (maior facilidade para caso se decida renomear o projeto)
-set(This Example)
+set(This Atv2)
 
 # Estabelecimento do nome do projeto e linguagens em uso
 project(${This} C CXX)
@@ -22,22 +22,22 @@ add_subdirectory(googletest)
 
 # Variável com arquivos "Headers"
 set(Headers
-    Atividade\ 02\ -\ 09.10/color.h
-    Atividade\ 02\ -\ 09.10/mat2.h
-    Atividade\ 02\ -\ 09.10/mat3.h
-    Atividade\ 02\ -\ 09.10/mat4.h
-    Atividade\ 02\ -\ 09.10/vec2.h
-    Atividade\ 02\ -\ 09.10/vec3.h
-    Atividade\ 02\ -\ 09.10/vec4.h
+    color.h
+    mat2.h
+    mat3.h
+    mat4.h
+    vec2.h
+    vec3.h
+    vec4.h
 )
 
 # Variável com arquivos "Sources"
 set(Sources
-    Atividade\ 02\ -\ 09.10/main.cc
+    main.cc
 )
 
 # Comando para realmente se fazer o código de testes (link com outras coisas para se formar o programa)
 add_library(${This} STATIC ${Sources} ${Headers})
 
 # Separação dos testes dos arquivos códigos (criação da sub-pasta)
-add_subdirectory(test)
+add_subdirectory(tests)

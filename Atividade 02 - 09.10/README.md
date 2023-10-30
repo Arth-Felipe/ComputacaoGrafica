@@ -48,7 +48,7 @@ Na pasta pai das atividades, "ComputacaoGrafica", foi feito um clone do reposit�
 git clone https://github.com/google/googletest.git
 ```
 
-Para definir o projeto, na pasta pai "ComputacaoGrafica" foi criado um arquivo denominado `CMakeLists.txt`, um diretório chamado `test` e, dentro deste, foram criados os arquivos `CMakeLists.txt` e `ExampleTests.cc`, este último com a definição dos testes em si. Para rodar os testes, o próprio Visual Studio Code fornece um caminho através de sua interface, que podem ser conferidos na imagem abaixo:
+Para definir o projeto, na pasta pai "ComputacaoGrafica" foi criado um arquivo denominado `CMakeLists.txt`, um diretório chamado `tests` e, dentro deste, foram criados os arquivos `CMakeLists.txt` e `Atv2-Tests.cc`, este último com a definição dos testes em si. Para rodar os testes, o próprio Visual Studio Code fornece um caminho através de sua interface, que podem ser conferidos na imagem abaixo:
 
 ![Passo a passo para execução dos testes](images/execucaoTestes.png)
 
