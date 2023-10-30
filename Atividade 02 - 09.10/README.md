@@ -50,11 +50,11 @@ git clone https://github.com/google/googletest.git
 
 Para definir o projeto, na pasta pai "ComputacaoGrafica" foi criado um arquivo denominado `CMakeLists.txt`, um diretório chamado `test` e, dentro deste, foram criados os arquivos `CMakeLists.txt` e `ExampleTests.cc`, este último com a definição dos testes em si. Para rodar os testes, o próprio Visual Studio Code fornece um caminho através de sua interface, que podem ser conferidos na imagem abaixo:
 
-![Passo a passo para execução dos testes](/execucaoTestes.png)
+![Passo a passo para execução dos testes](images/execucaoTestes.png)
 
 Por fim, os resultados podem ser conferidos abrindo o terminal e indo na aba "Output". Abaixo uma comprovação de que todos foram bem-sucedidos:
 
-![Resultado da execução bem-sucedida dos testes](/resultadoTestes.png)
+![Resultado da execução bem-sucedida dos testes](images/resultadoTestes.png)
 
 Para a realização correta de todos esses procedimentos e devida correção dos erros que surgiram, foram utilizados os seguintes materiais de apoio:
 
