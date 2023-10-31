@@ -16,7 +16,10 @@
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- //
 
 
-// Teste de carregamento de arquivo OBJ e preenchimento das estruturas de dados
+/**
+ * @brief Teste de carregamento de arquivo OBJ e preenchimento das estruturas de dados.
+ * 
+ */
 TEST(ProcessObjectTests, TestLoadFileOBJ) {
 
     processObject instancia;
@@ -34,7 +37,10 @@ TEST(ProcessObjectTests, TestLoadFileOBJ) {
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- //
 
 
-// Teste de leitura de vértices
+/**
+ * @brief Teste de leitura de vértices.
+ * 
+ */
 TEST(ProcessObjectTests, TestVertices) {
 
     processObject instancia;
@@ -50,7 +56,10 @@ TEST(ProcessObjectTests, TestVertices) {
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- //
 
 
-// Teste de leitura de coordenadas de textura
+/**
+ * @brief Teste de leitura de coordenadas de textura.
+ * 
+ */
 TEST(ProcessObjectTests, TestTextureCoordinates) {
 
     processObject instancia;
@@ -66,7 +75,10 @@ TEST(ProcessObjectTests, TestTextureCoordinates) {
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- //
 
 
-// Teste de leitura de normais
+/**
+ * @brief Teste de leitura de normais.
+ * 
+ */
 TEST(ProcessObjectTests, TestNormals) {
 
     processObject instancia;
@@ -82,7 +94,10 @@ TEST(ProcessObjectTests, TestNormals) {
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- //
 
 
-// Teste de leitura de faces
+/**
+ * @brief Teste de leitura de faces.
+ * 
+ */
 TEST(ProcessObjectTests, TestFaces) {
 
     processObject instancia;
