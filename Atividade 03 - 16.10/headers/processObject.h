@@ -97,11 +97,7 @@ public:
                     faceClass.push_back(faceLocal);
                 else
                     std::cerr << "Erro na análise da seguinte linha de face: " << lineRead << std::endl;
-            }
-
-            else
-                std::cerr << "Erro na leitura de linha: não se encaixou em 'v', 'vt', 'vn' ou 'f'" << std::endl;
-        }
+        }   }
 
         file.close();
         return true;

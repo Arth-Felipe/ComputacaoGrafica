@@ -26,7 +26,10 @@ set(Headers
 )
 
 # Comando para realmente se fazer o código de testes (link com outras coisas para se formar o programa)
-add_library(${This} STATIC ${Sources} ${Headers})
+add_library(${This} STATIC ${Headers})
+
+# Resolução do problema "CMake can not determine linker language for target" (adiciona uma verificação mais rigorosa de qual linguagem é usada)
+set_target_properties(${This} PROPERTIES LINKER_LANGUAGE CXX)
 
 # Separação dos testes dos arquivos códigos (criação da sub-pasta)
 add_subdirectory(tests)
