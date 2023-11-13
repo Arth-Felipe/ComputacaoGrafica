@@ -16,6 +16,15 @@
 
 //-------------------------------------------------------------------------------------------------------------//
 
+MakeImage::MakeImage() {};
+
+MakeImage::MakeImage(const int width, const int height) {
+    this->image_width = width;
+    this->image_height = height;
+};
+
+//-------------------------------------------------------------------------------------------------------------//
+
 /**
  * @brief Esta função gera um arquivo .ppm de uma imagem gradiente do azul para o verde
  * 
