@@ -20,9 +20,9 @@
  * @brief Esta função gera um arquivo .ppm de uma imagem gradiente do azul para o verde
  * 
  */
-void MakeImage::drawGradient() {
+void MakeImage::drawGradient(std::string nomeDoArquivo) {
 
-    std::ofstream file("result-gradiente.ppm");
+    std::ofstream file(nomeDoArquivo);
     file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     for (int j = 0; j < image_height; ++j) {
@@ -35,7 +35,7 @@ void MakeImage::drawGradient() {
         }
     }
     file.close();
-    std::cout << "Geração do arquivo 'result-gradiente.ppm' bem-sucedida!" << std::endl;
+    std::cout << "Geração do arquivo " << nomeDoArquivo << " bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
@@ -44,9 +44,9 @@ void MakeImage::drawGradient() {
  * @brief Esta função gera um arquivo .ppm de uma imagem de um anel (ou rosquinha) verde num fundo preto
  * 
  */
-void MakeImage::drawRing() {
+void MakeImage::drawRing(std::string nomeDoArquivo) {
 
-    std::ofstream file("result-anel.ppm");
+    std::ofstream file(nomeDoArquivo);
     file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     // Constantes para a criação dos dois círculos que irão compor o anel (um externo e um interno)
@@ -73,7 +73,7 @@ void MakeImage::drawRing() {
         }
     }
     file.close();
-    std::cout << "Geração do arquivo 'result-anel.ppm' bem-sucedida!" << std::endl;
+    std::cout << "Geração do arquivo " << nomeDoArquivo << " bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
@@ -82,9 +82,9 @@ void MakeImage::drawRing() {
  * @brief Esta função gera um arquivo .ppm de uma imagem de um triângulo equilátero azul num fundo preto
  * 
  */
-void MakeImage::drawTriangle() {
+void MakeImage::drawTriangle(std::string nomeDoArquivo) {
 
-    std::ofstream file("result-triangulo.ppm");
+    std::ofstream file(nomeDoArquivo);
     file << "P3\n" << image_width << ' ' << image_height << "\n255\n";
 
     // Coordenadas dos vértices do triângulo
@@ -113,7 +113,7 @@ void MakeImage::drawTriangle() {
         }
     }
     file.close();
-    std::cout << "Geração do arquivo 'result-triangulo.ppm' bem-sucedida!" << std::endl;
+    std::cout << "Geração do arquivo " << nomeDoArquivo << " bem-sucedida!" << std::endl;
 }
 
 //-------------------------------------------------------------------------------------------------------------//
@@ -130,17 +130,8 @@ bool MakeImage::saveImage(const std::string& nomeDoArquivo) {
     // Inicialização do ImageMagick
     Magick::InitializeMagick(nullptr);
 
-    std::string oldFormat = "x";
-
-    if (nomeDoArquivo[7] == 'g')
-        oldFormat = "result-gradiente.ppm";
-
-    else if (nomeDoArquivo[7] == 'a')
-        oldFormat = "result-anel.ppm";
-
-    else // (nomeDoArquivo[7] == 't')
-        oldFormat = "result-triangulo.ppm";
-
+    // Uso do novo nome, com a terminação .png, para conseguir o nome antigo, com a terminação .ppm
+    std::string oldFormat = nomeDoArquivo.substr(0, nomeDoArquivo.find_last_of('.')) + ".ppm";
     Magick::Image image(oldFormat);
 
     try {

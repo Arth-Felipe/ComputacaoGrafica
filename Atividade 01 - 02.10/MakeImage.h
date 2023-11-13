@@ -10,9 +10,9 @@
 
 class MakeImage {
 public:
-    void drawGradient();
-    void drawRing();
-    void drawTriangle();
+    void drawGradient(std::string nomeDoArquivo);
+    void drawRing(std::string nomeDoArquivo);
+    void drawTriangle(std::string nomeDoArquivo);
     bool saveImage(const std::string& nomeDoArquivo);
 
 private:

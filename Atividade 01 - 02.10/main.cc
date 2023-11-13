@@ -18,9 +18,9 @@ int main() {
     MakeImage myImage = MakeImage();
 
     // Geração dos arquivos .ppm através dos métodos específicos de cada imagem (um degradê, um anel e um triângulo)
-    myImage.drawGradient();
-    myImage.drawRing();
-    myImage.drawTriangle();
+    myImage.drawGradient("result-gradiente.ppm");
+    myImage.drawRing("result-anel.ppm");
+    myImage.drawTriangle("result-triangulo.ppm");
 
     // Conversão dos arquivos .ppm gerados em imagens .png
     myImage.saveImage("result-gradiente.png");
