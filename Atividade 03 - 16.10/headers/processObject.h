@@ -28,6 +28,11 @@
  */
 struct Vertex {
     float x, y, z;
+
+    // Conversão dos objetos Vertex em pontos (para a atv05, onde código tenta usar objetos do tipo Vertex como pontos point3).
+    operator point3() const {
+        return point3(x, y, z);
+    }
 };
 
 struct TextureCoordinate {
