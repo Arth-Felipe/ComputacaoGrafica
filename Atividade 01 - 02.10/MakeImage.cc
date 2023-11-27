@@ -18,6 +18,12 @@
 
 MakeImage::MakeImage() {};
 
+/**
+ * @brief Sobrecarga do construtor com recebimento de parâmetros de largura e altura da imagem.
+ * 
+ * @param width 
+ * @param height 
+ */
 MakeImage::MakeImage(const int width, const int height) {
     this->image_width = width;
     this->image_height = height;
@@ -139,13 +145,14 @@ bool MakeImage::saveImage(const std::string& nomeDoArquivo) {
     // Inicialização do ImageMagick
     Magick::InitializeMagick(nullptr);
 
-    // Uso do novo nome, com a terminação .png, para conseguir o nome antigo, com a terminação .ppm
-    std::string oldFormat = nomeDoArquivo.substr(0, nomeDoArquivo.find_last_of('.')) + ".ppm";
-    Magick::Image image(oldFormat);
+    Magick::Image image(nomeDoArquivo);
+
+    // Transformação do nome com a terminação .ppm para novo nome, com a terminação .png
+    std::string newFormat = nomeDoArquivo.substr(0, nomeDoArquivo.find_last_of('.')) + ".png";
 
     try {
-        image.write(nomeDoArquivo);
-        std::cout << "Imagem salva como '" << nomeDoArquivo << "'." << std::endl;
+        image.write(newFormat);
+        std::cout << "Imagem salva como '" << newFormat << "'." << std::endl;
         return true;
 
     } catch (Magick::Exception& e) {

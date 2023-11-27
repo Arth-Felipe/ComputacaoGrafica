@@ -23,9 +23,9 @@ int main() {
     myImage.drawTriangle("result-triangulo.ppm");
 
     // Conversão dos arquivos .ppm gerados em imagens .png
-    myImage.saveImage("result-gradiente.png");
-    myImage.saveImage("result-anel.png");
-    myImage.saveImage("result-triangulo.png");
+    myImage.saveImage("result-gradiente.ppm");
+    myImage.saveImage("result-anel.ppm");
+    myImage.saveImage("result-triangulo.ppm");
 
     return 0;
 }
