@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atividade 05: Referência do Arquivo src/main_old.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Atividade 05<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo main_old.cc</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;../../Atividade 01 - 02.10/MakeImage.h&quot;</code><br />
+<code>#include &quot;../../Atividade 02 - 09.10/color.h&quot;</code><br />
+<code>#include &quot;../../Atividade 03 - 16.10/headers/processObject.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="hittable_8h_source.html">../headers/hittable.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a4862284b2a7039a66a93aee49de68830" id="r_a4862284b2a7039a66a93aee49de68830"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__old_8cc.html#a4862284b2a7039a66a93aee49de68830">hit_triangle</a> (const point3 &amp;v0, const point3 &amp;v1, const point3 &amp;v2, const ray &amp;r)</td></tr>
+<tr class="memdesc:a4862284b2a7039a66a93aee49de68830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um raio atinge um triângulo definido por três pontos no espaço 3D. Recebe os vértices do triângulo e o raio a ser testado. Utiliza a fórmula de interseção de plano e testes de coordenadas bariôcentricas para determinar se a interseção está dentro do triângulo.  <br /></td></tr>
+<tr class="separator:a4862284b2a7039a66a93aee49de68830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28adf54e4fc190e2e71fd0242ffb6a26" id="r_a28adf54e4fc190e2e71fd0242ffb6a26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__old_8cc.html#a28adf54e4fc190e2e71fd0242ffb6a26">hit_obj</a> (const std::vector&lt; Vertex &gt; &amp;vertices, const std::vector&lt; Face &gt; &amp;faces, const ray &amp;r)</td></tr>
+<tr class="memdesc:a28adf54e4fc190e2e71fd0242ffb6a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um raio atinge um objeto .obj.  <br /></td></tr>
+<tr class="separator:a28adf54e4fc190e2e71fd0242ffb6a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c0bbb1ae259b944b00359d9cc24550" id="r_ab6c0bbb1ae259b944b00359d9cc24550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__old_8cc.html#ab6c0bbb1ae259b944b00359d9cc24550">ray_color</a> (const ray &amp;r)</td></tr>
+<tr class="memdesc:ab6c0bbb1ae259b944b00359d9cc24550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina a cor de um raio de cena para o triângulo.  <br /></td></tr>
+<tr class="separator:ab6c0bbb1ae259b944b00359d9cc24550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe513dcd1f316703017e7c874d5bafea" id="r_afe513dcd1f316703017e7c874d5bafea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__old_8cc.html#afe513dcd1f316703017e7c874d5bafea">ray_color</a> (const ray &amp;r, const processObject &amp;objData)</td></tr>
+<tr class="memdesc:afe513dcd1f316703017e7c874d5bafea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina a cor de um raio de cena para o arquivo OBJ.  <br /></td></tr>
+<tr class="separator:afe513dcd1f316703017e7c874d5bafea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main__old_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="a28adf54e4fc190e2e71fd0242ffb6a26" name="a28adf54e4fc190e2e71fd0242ffb6a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28adf54e4fc190e2e71fd0242ffb6a26">&#9670;&#160;</a></span>hit_obj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hit_obj </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; Vertex &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Face &gt; &amp;&#160;</td>
+          <td class="paramname"><em>faces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ray &amp;&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um raio atinge um objeto .obj. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td></td></tr>
+    <tr><td class="paramname">faces</td><td></td></tr>
+    <tr><td class="paramname">r</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+<p>Itera sobre as faces do objeto .obj</p>
+<p>Obtém os vértices da face (os índices começam em 1 em .obj)</p>
+<p>Índices em .obj começam em 1</p>
+<p>Verifica se o raio atinge o triângulo formado pelos vértices</p>
+<p>Há interseção com pelo menos um triângulo</p>
+<p>Nenhum triângulo foi atingido pelo raio</p>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                                                                            {</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> Face&amp; face : faces) {</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   87</span>        <span class="keyword">const</span> Vertex&amp; v0 = vertices[face.vertexIndex - 1];  </div>
+<div class="line"><span class="lineno">   88</span>        <span class="keyword">const</span> Vertex&amp; v1 = vertices[face.textureCoordIndex - 1];</div>
+<div class="line"><span class="lineno">   89</span>        <span class="keyword">const</span> Vertex&amp; v2 = vertices[face.normalIndex - 1];</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   92</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="main__old_8cc.html#a4862284b2a7039a66a93aee49de68830">hit_triangle</a>(v0, v1, v2, r))</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>; </div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>; </div>
+<div class="line"><span class="lineno">   96</span>}</div>
+<div class="ttc" id="amain__old_8cc_html_a4862284b2a7039a66a93aee49de68830"><div class="ttname"><a href="main__old_8cc.html#a4862284b2a7039a66a93aee49de68830">hit_triangle</a></div><div class="ttdeci">bool hit_triangle(const point3 &amp;v0, const point3 &amp;v1, const point3 &amp;v2, const ray &amp;r)</div><div class="ttdoc">Verifica se um raio atinge um triângulo definido por três pontos no espaço 3D. Recebe os vértices do ...</div><div class="ttdef"><b>Definição</b> main_old.cc:35</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4862284b2a7039a66a93aee49de68830" name="a4862284b2a7039a66a93aee49de68830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4862284b2a7039a66a93aee49de68830">&#9670;&#160;</a></span>hit_triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hit_triangle </td>
+          <td>(</td>
+          <td class="paramtype">const point3 &amp;&#160;</td>
+          <td class="paramname"><em>v0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const point3 &amp;&#160;</td>
+          <td class="paramname"><em>v1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const point3 &amp;&#160;</td>
+          <td class="paramname"><em>v2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ray &amp;&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um raio atinge um triângulo definido por três pontos no espaço 3D. Recebe os vértices do triângulo e o raio a ser testado. Utiliza a fórmula de interseção de plano e testes de coordenadas bariôcentricas para determinar se a interseção está dentro do triângulo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v0</td><td></td></tr>
+    <tr><td class="paramname">v1</td><td></td></tr>
+    <tr><td class="paramname">v2</td><td></td></tr>
+    <tr><td class="paramname">r</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+<p>Vetor normal ao plano do triângulo</p>
+<p>Verificação se o raio é paralelo ao plano do triângulo</p>
+<p>Cálculo da distância até plano do triângulo</p>
+<p>Verificação se a interseção está à frente do raio</p>
+<p>Cálculo da posição da interseção no plano do triângulo</p>
+<p>Teste se a interseção está dentro do triângulo usando coordenadas bariôcentricas</p>
+<p>A interseção está dentro do triângulo</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>                                                                                      {</div>
+<div class="line"><span class="lineno">   37</span>    vec3 normal = cross(v1 - v0, v2 - v0);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   40</span>    <span class="keywordtype">double</span> denominador = dot(normal, r.direction());</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> (std::fabs(denominador) &lt; 1e-6)</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   43</span> </div>
+<div class="line"><span class="lineno">   45</span>    <span class="keywordtype">double</span> t = dot(normal, v0 - r.origin()) / denominador;</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordflow">if</span> (t &lt; 0)</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   52</span>    point3 intersecao = r.origin() + t * r.direction();</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   55</span>    vec3 lado0 = v1 - v0;</div>
+<div class="line"><span class="lineno">   56</span>    vec3 lado1 = v2 - v1;</div>
+<div class="line"><span class="lineno">   57</span>    vec3 lado2 = v0 - v2;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>    vec3 C0 = intersecao - v0;</div>
+<div class="line"><span class="lineno">   60</span>    vec3 C1 = intersecao - v1;</div>
+<div class="line"><span class="lineno">   61</span>    vec3 C2 = intersecao - v2;</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    <span class="keywordflow">if</span> (dot(cross(lado0, C0), normal) &gt;= 0 &amp;&amp;</div>
+<div class="line"><span class="lineno">   64</span>        dot(cross(lado1, C1), normal) &gt;= 0 &amp;&amp;</div>
+<div class="line"><span class="lineno">   65</span>        dot(cross(lado2, C2), normal) &gt;= 0)</div>
+<div class="line"><span class="lineno">   66</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;  </div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   69</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Render</p>
+<p>Objeto para criação da imagem</p>
+<p>Abertura do arquivo PPM para escrita</p>
+<p>Cálculo da localização do centro do pixel no espaço 3D</p>
+<p>Determinação da cor do raio e escrita no arquivo</p>
+<p>Fechamento do arquivo PPM e salvamento da imagem</p>
+<p>Abertura do arquivo PPM para escrita</p>
+<p>Cálculo da localização do centro do pixel no espaço 3D</p>
+<p>Determinação da cor do raio e escrita no arquivo</p>
+<p>Fechamento do arquivo PPM e salvamento da imagem</p>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>           {</div>
+<div class="line"><span class="lineno">  146</span> </div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  150</span>    MakeImage myImage = MakeImage(image_width, image_height);</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span><span class="comment">/*********************************************************** TRIÂNGULO ***********************************************************/</span></div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  156</span>    std::ofstream fileTriangle(<span class="stringliteral">&quot;triangle.ppm&quot;</span>);</div>
+<div class="line"><span class="lineno">  157</span>    fileTriangle &lt;&lt; <span class="stringliteral">&quot;P3\n&quot;</span> &lt;&lt; image_width &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; image_height &lt;&lt; <span class="stringliteral">&quot;\n255\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; image_height; ++j) {</div>
+<div class="line"><span class="lineno">  160</span>        std::clog &lt;&lt; <span class="stringliteral">&quot;\rScanlines remaining: &quot;</span> &lt;&lt; (image_height - j) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; std::flush;</div>
+<div class="line"><span class="lineno">  161</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; image_width; ++i) {</div>
+<div class="line"><span class="lineno">  162</span> </div>
+<div class="line"><span class="lineno">  164</span>            <span class="keyword">auto</span> pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keyword">auto</span> ray_direction = pixel_center - camera_center;</div>
+<div class="line"><span class="lineno">  166</span>            ray r(camera_center, ray_direction);</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  169</span>            <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a> pixel_color = <a class="code hl_function" href="main__old_8cc.html#ab6c0bbb1ae259b944b00359d9cc24550">ray_color</a>(r);</div>
+<div class="line"><span class="lineno">  170</span>            <a class="code hl_function" href="color_8h.html#a62f074b695c0d70726abedabf84d9c79">write_color</a>(fileTriangle, pixel_color);</div>
+<div class="line"><span class="lineno">  171</span>    }   }</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  174</span>    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  175</span>    fileTriangle.close();</div>
+<div class="line"><span class="lineno">  176</span>    myImage.saveImage(<span class="stringliteral">&quot;triangle.ppm&quot;</span>);</div>
+<div class="line"><span class="lineno">  177</span> </div>
+<div class="line"><span class="lineno">  178</span>    std::clog &lt;&lt; <span class="stringliteral">&quot;\rDone.                 \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span> </div>
+<div class="line"><span class="lineno">  181</span><span class="comment">/*********************************************************** ARQUIVO OBJ ***********************************************************/</span></div>
+<div class="line"><span class="lineno">  182</span> </div>
+<div class="line"><span class="lineno">  183</span>    processObject objData;</div>
+<div class="line"><span class="lineno">  184</span>    objData.loadFileOBJ(<span class="stringliteral">&quot;/mnt/c/Users/Archie/Desktop/ComputacaoGrafica/Atividade 04 - 30.10/images/cube.obj&quot;</span>);</div>
+<div class="line"><span class="lineno">  185</span> </div>
+<div class="line"><span class="lineno">  187</span>    std::ofstream fileObject(<span class="stringliteral">&quot;obj.ppm&quot;</span>);</div>
+<div class="line"><span class="lineno">  188</span>    fileObject &lt;&lt; <span class="stringliteral">&quot;P3\n&quot;</span> &lt;&lt; image_width &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; image_height &lt;&lt; <span class="stringliteral">&quot;\n255\n&quot;</span>;</div>
+<div class="line"><span class="lineno">  189</span> </div>
+<div class="line"><span class="lineno">  190</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; image_height; ++j) {</div>
+<div class="line"><span class="lineno">  191</span>        std::clog &lt;&lt; <span class="stringliteral">&quot;\rScanlines remaining: &quot;</span> &lt;&lt; (image_height - j) &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; std::flush;</div>
+<div class="line"><span class="lineno">  192</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; image_width; ++i) {</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  195</span>            <span class="keyword">auto</span> pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keyword">auto</span> ray_direction = pixel_center - camera_center;</div>
+<div class="line"><span class="lineno">  197</span>            ray r(camera_center, ray_direction);</div>
+<div class="line"><span class="lineno">  198</span> </div>
+<div class="line"><span class="lineno">  200</span>            <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a> pixel_color = <a class="code hl_function" href="main__old_8cc.html#ab6c0bbb1ae259b944b00359d9cc24550">ray_color</a>(r, objData);</div>
+<div class="line"><span class="lineno">  201</span>            <a class="code hl_function" href="color_8h.html#a62f074b695c0d70726abedabf84d9c79">write_color</a>(fileObject, pixel_color);</div>
+<div class="line"><span class="lineno">  202</span>    }   }</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  205</span>    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  206</span>    fileObject.close();</div>
+<div class="line"><span class="lineno">  207</span>    myImage.saveImage(<span class="stringliteral">&quot;obj.ppm&quot;</span>);</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>    std::clog &lt;&lt; <span class="stringliteral">&quot;\rDone.                 \n&quot;</span>;</div>
+<div class="line"><span class="lineno">  210</span>}</div>
+<div class="ttc" id="acolor_8h_html_a54655a19ac6428ab22c6f2d7ec0413c4"><div class="ttname"><a href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a></div><div class="ttdeci">vec3 color</div><div class="ttdef"><b>Definição</b> color.h:17</div></div>
+<div class="ttc" id="acolor_8h_html_a62f074b695c0d70726abedabf84d9c79"><div class="ttname"><a href="color_8h.html#a62f074b695c0d70726abedabf84d9c79">write_color</a></div><div class="ttdeci">void write_color(std::ostream &amp;out, color pixel_color, int samples_per_pixel)</div><div class="ttdef"><b>Definição</b> color.h:23</div></div>
+<div class="ttc" id="amain__old_8cc_html_ab6c0bbb1ae259b944b00359d9cc24550"><div class="ttname"><a href="main__old_8cc.html#ab6c0bbb1ae259b944b00359d9cc24550">ray_color</a></div><div class="ttdeci">color ray_color(const ray &amp;r)</div><div class="ttdoc">Determina a cor de um raio de cena para o triângulo.</div><div class="ttdef"><b>Definição</b> main_old.cc:106</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab6c0bbb1ae259b944b00359d9cc24550" name="ab6c0bbb1ae259b944b00359d9cc24550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c0bbb1ae259b944b00359d9cc24550">&#9670;&#160;</a></span>ray_color() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a> ray_color </td>
+          <td>(</td>
+          <td class="paramtype">const ray &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determina a cor de um raio de cena para o triângulo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>color </dd></dl>
+<p>Definição dos vértices do triângulo</p>
+<p>Verificação se o raio atinge o triângulo e respectivo retorno da cor correspondente</p>
+<p>Renderização de um gradiente de azul para branco no fundo</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                              {</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  109</span>    point3 v0(-0.5, -0.5, -1.0);</div>
+<div class="line"><span class="lineno">  110</span>    point3 v1(0.5, -0.5, -1.0);</div>
+<div class="line"><span class="lineno">  111</span>    point3 v2(0, 0.5, -1.0);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="main__old_8cc.html#a4862284b2a7039a66a93aee49de68830">hit_triangle</a>(v0, v1, v2, r))</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(0, 0, 1);</div>
+<div class="line"><span class="lineno">  116</span> </div>
+<div class="line"><span class="lineno">  118</span>    vec3 unit_direction = unit_vector(r.direction());</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keyword">auto</span> a = 0.5 * (unit_direction.y() + 1.0);</div>
+<div class="line"><span class="lineno">  120</span>    <span class="keywordflow">return</span> (1.0 - a) * <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(1.0, 1.0, 1.0) + a * <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(0.5, 0.7, 1.0);</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afe513dcd1f316703017e7c874d5bafea" name="afe513dcd1f316703017e7c874d5bafea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe513dcd1f316703017e7c874d5bafea">&#9670;&#160;</a></span>ray_color() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a> ray_color </td>
+          <td>(</td>
+          <td class="paramtype">const ray &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const processObject &amp;&#160;</td>
+          <td class="paramname"><em>objData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determina a cor de um raio de cena para o arquivo OBJ. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td></td></tr>
+    <tr><td class="paramname">objData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>color </dd></dl>
+<p>Verificação se o raio atinge o objeto .obj</p>
+<p>Renderização de um gradiente de azul para branco no fundo</p>
+<div class="fragment"><div class="line"><span class="lineno">  132</span>                                                            {</div>
+<div class="line"><span class="lineno">  133</span> </div>
+<div class="line"><span class="lineno">  135</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="main__old_8cc.html#a28adf54e4fc190e2e71fd0242ffb6a26">hit_obj</a>(objData.vertexClass, objData.faceClass, r))</div>
+<div class="line"><span class="lineno">  136</span>        <span class="keywordflow">return</span> <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(0, 1, 0);</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  139</span>    vec3 unit_direction = unit_vector(r.direction());</div>
+<div class="line"><span class="lineno">  140</span>    <span class="keyword">auto</span> a = 0.5 * (unit_direction.y() + 1.0);</div>
+<div class="line"><span class="lineno">  141</span>    <span class="keywordflow">return</span> (1.0 - a) * <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(1.0, 1.0, 1.0) + a * <a class="code hl_typedef" href="color_8h.html#a54655a19ac6428ab22c6f2d7ec0413c4">color</a>(0.5, 0.7, 1.0);</div>
+<div class="line"><span class="lineno">  142</span>}</div>
+<div class="ttc" id="amain__old_8cc_html_a28adf54e4fc190e2e71fd0242ffb6a26"><div class="ttname"><a href="main__old_8cc.html#a28adf54e4fc190e2e71fd0242ffb6a26">hit_obj</a></div><div class="ttdeci">bool hit_obj(const std::vector&lt; Vertex &gt; &amp;vertices, const std::vector&lt; Face &gt; &amp;faces, const ray &amp;r)</div><div class="ttdoc">Verifica se um raio atinge um objeto .obj.</div><div class="ttdef"><b>Definição</b> main_old.cc:81</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

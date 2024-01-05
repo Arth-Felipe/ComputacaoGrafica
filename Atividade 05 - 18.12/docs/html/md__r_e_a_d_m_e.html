@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atividade 05: Atividade 05 - 18 de Dezembro</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Atividade 05<span id="projectnumber">&#160;1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">Atividade 05 - 18 de Dezembro</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Objetivo</h1>
+<p>Através dos ensinamentos obtidos com a leitura das seções 6, 7, 8, 9 e 12 do tutorial <em><a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html">"Ray Tracing in One Weekend"</a></em>, usar um arquivo com informação de normal para implementar o material difuso e, por fim, visualizar uma cena com pelo menos três objetos e de dois pontos de vista diferentes.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Modificações</h1>
+<ul>
+<li><code><a class="el" href="color_8h.html" title="Atualização da função write_color() para se obter a soma total de toda a luz do pixel e também contab...">color.h</a></code> - Atualização da função <code><a class="el" href="color_8h.html#a62f074b695c0d70726abedabf84d9c79">write_color()</a></code> para se obter a soma total de toda a luz do pixel e também contabilizar o número de amostras envolvidas.</li>
+<li><code>vec3.h</code> - Atualmente não temos uma maneira de refletir aleatoriamente um raio, então precisaremos adicionar algumas funções à manipulação de vetores, como a capacidade de gerar vetores aleatórios arbitrários, um método de rejeição para gerar o vetor aleatório dentro da esfera unitária, a normalização desse vetor e a determinação de qual hemisfério ele se encontra através do produto escalar.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Novos Programas</h1>
+<ul>
+<li><code><a class="el" href="hittable_8h.html" title="Classe abstrata para qualquer coisa que um raio possa atingir. Possui uma função hit responsável por ...">hittable.h</a></code> - Classe abstrata para qualquer coisa que um raio possa atingir. Possui uma função <code>hit</code> responsável por determinar se um raio atinge o objeto e, se sim, fornecer informações sobre o ponto de interseção.</li>
+<li><code><a class="el" href="sphere_8h.html" title="Implementação específica da interface descrita acima (ou seja, ao herdar da classe hittable....">sphere.h</a></code> - Implementação específica da interface descrita acima (ou seja, ao herdar da classe <code><a class="el" href="hittable_8h.html" title="Classe abstrata para qualquer coisa que um raio possa atingir. Possui uma função hit responsável por ...">hittable.h</a></code>, ela garante que qualquer objeto da classe <code>sphere</code> possa ser tratado polimorficamente como um objeto <code>hittable</code>). Portanto, essa classe também teve que implementar a função <code>hit</code>, fornecendo uma lógica específica para determinar se um raio atinge uma esfera e calcular as informações de interseção necessárias.</li>
+<li><code><a class="el" href="hittable__list_8h.html" title="Classe que armazena uma lista de hittables.">hittable_list.h</a></code> - Classe que armazena uma lista de <code>hittables</code>.</li>
+<li><code><a class="el" href="rtweekend_8h.html" title="Arquivo de cabeçalho geral com constantes matemáticas úteis (como infinito e pi) e funções utilitária...">rtweekend.h</a></code> - Arquivo de cabeçalho geral com constantes matemáticas úteis (como infinito e pi) e funções utilitárias para o futuro. Também é capaz de gerar e retornar números aleatórios reais.</li>
+<li><code><a class="el" href="interval_8h.html" title="Classe de intervalo para gerenciar intervalos de valores reais com mínimo e máximo,...">interval.h</a></code> - Classe de intervalo para gerenciar intervalos de valores reais com mínimo e máximo, usada com bastante frequência mais a frente.</li>
+<li><code><a class="el" href="camera_8h.html" title="Mudança do código da câmera da main para uma classe própria. Responsável por (1) construir e enviar r...">camera.h</a></code> - Mudança do código da câmera da <code>main</code> para uma classe própria. Responsável por (1) construir e enviar raios para o mundo e (2) usar os resultados desses raios para construir a imagem renderizada. Depois que a <code>main</code> cria uma câmera e define seus valores padrão, ela chama o método <code>render()</code>, que prepara a câmera e então executa o loop de renderização.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Arquivos OBJ Externos</h1>
+<ul>
+<li><code>dodgeball.obj</code></li>
+<li><code>cube.obj</code></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Execução</h1>
+<ul>
+<li><code>Makefile</code> - arquivo de centralização dos comandos de compilação e execução. Agora a compilação pode ser feita apenas com o comando _<code>make</code>_ e a execução com _<code>./executavel</code>_. Com o comando _<code>make clean</code>_ é possível ainda limpar todo o "lixo" gerado pela compilação, excluindo assim o arquivo _<code>executavel</code>_ e todos com terminações _&lt;tt&gt;.o_, _&lt;tt&gt;.png_ e _&lt;tt&gt;.ppm_.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Resultados</h1>
+<p><img src="images/result-sphere-section07.png" alt="Resultado da implementação da seção 7 do tutorial" class="inline"/> <img src="images/result-sphere-section08.png" alt="Resultado da implementação da seção 8 do tutorial" class="inline"/> <img src="images/result-sphere-section09.png" alt="Resultado da implementação da seção 9 do tutorial" class="inline"/> <img src="images/result-cam1.png" alt="Primeiro ponto de vista para a visualização de três objetos difusos" class="inline"/> <img src="images/result-cam2.png" alt="Segundo ponto de vista para a visualização de três objetos difusos" class="inline"/> </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
