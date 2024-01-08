@@ -12,6 +12,7 @@
 #include "rtweekend.h"
 #include "color.h"
 #include "hittable.h"
+#include "../../Atividade 06 - 19.12/headers/material.h"
 
 #include "../../Atividade 01 - 02.10/MakeImage.h"
 #include <iostream>
@@ -107,8 +108,11 @@ class camera {
 
         if (world.hit(r, interval(0.001, infinity), rec)) {
             // return 0.5 * (rec.normal + color(1,1,1));            // Antiga esfera colorida azul e rosa em degradê
-            vec3 direction = rec.normal + random_unit_vector();
-            return 0.1 * ray_color(ray(rec.p, direction), depth-1, world);
+            ray scattered;
+            color attenuation;
+            if (rec.mat->scatter(r, rec, attenuation, scattered))
+                return attenuation * ray_color(scattered, depth-1, world);
+            return color(0,0,0);
         }
 
         vec3 unit_direction = unit_vector(r.direction());
